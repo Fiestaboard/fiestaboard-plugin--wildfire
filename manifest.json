@@ -1,0 +1,92 @@
+{
+  "id": "wildfire",
+  "name": "Wildfire Tracker",
+  "version": "0.1.0",
+  "description": "Display active wildfire incidents from the National Interagency Fire Center (NIFC).",
+  "author": "FiestaBoard Team",
+  "icon": "flame",
+  "category": "data",
+  "repository": "https://github.com/Fiestaboard/fiestaboard-plugin--wildfire",
+  "documentation": "README.md",
+  "min_refresh_seconds": 1800,
+  "settings_schema": {
+    "type": "object",
+    "properties": {
+      "enabled": {
+        "type": "boolean",
+        "title": "Enabled",
+        "default": false
+      },
+      "state": {
+        "type": "string",
+        "title": "US State Filter",
+        "description": "Two-letter state code to filter by (leave empty for nationwide).",
+        "default": ""
+      },
+      "refresh_seconds": {
+        "type": "integer",
+        "title": "Refresh Interval (seconds)",
+        "description": "How often to fetch wildfire data.",
+        "default": 1800,
+        "minimum": 900
+      }
+    },
+    "required": []
+  },
+  "variables": {
+    "groups": {
+      "largest": {
+        "label": "Largest Active Fire"
+      },
+      "stats": {
+        "label": "Statistics"
+      }
+    },
+    "simple": {
+      "fire_name": {
+        "description": "Name of the largest active fire",
+        "type": "string",
+        "max_length": 20,
+        "group": "largest",
+        "example": "Caldor Fire"
+      },
+      "state": {
+        "description": "State where the fire is located",
+        "type": "string",
+        "max_length": 3,
+        "group": "largest",
+        "example": "CA"
+      },
+      "acres": {
+        "description": "Acres burned (most recent estimate)",
+        "type": "string",
+        "max_length": 12,
+        "group": "largest",
+        "example": "28,000"
+      },
+      "containment": {
+        "description": "Percent containment",
+        "type": "string",
+        "max_length": 5,
+        "group": "largest",
+        "example": "42%"
+      },
+      "active_count": {
+        "description": "Total number of active fires in the query result",
+        "type": "integer",
+        "max_length": 4,
+        "group": "stats",
+        "example": "15"
+      }
+    }
+  },
+  "screenshots": [
+    {
+      "src": "docs/board-display.png",
+      "alt": "Wildfire Tracker displayed on a Vestaboard",
+      "caption": "Example board output using the default template",
+      "primary": true
+    }
+  ],
+  "api_docs": "https://www.nifc.gov/fire-information/nfn"
+}
