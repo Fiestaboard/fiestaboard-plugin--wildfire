@@ -1,7 +1,7 @@
 {
   "id": "wildfire",
   "name": "Wildfire Tracker",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Display active wildfire incidents from the National Interagency Fire Center (NIFC).",
   "author": "FiestaBoard Team",
   "icon": "flame",
@@ -88,5 +88,66 @@
       "primary": true
     }
   ],
-  "api_docs": "https://www.nifc.gov/fire-information/nfn"
+  "api_docs": "https://www.nifc.gov/fire-information/nfn",
+  "demo": {
+    "flagship": {
+      "name": "Wildfire Tracker",
+      "template": [
+        "Wildfire Tracker",
+        "",
+        "{{wildfire.fire_name}}",
+        "{{wildfire.state}}  {{wildfire.acres}} acres",
+        "Containment: {{wildfire.containment}}",
+        "{{wildfire.active_count}} active fires"
+      ],
+      "line_metadata": [
+        {
+          "alignment": "left",
+          "wrap": false
+        },
+        {
+          "alignment": "left",
+          "wrap": false
+        },
+        {
+          "alignment": "left",
+          "wrap": true
+        },
+        {
+          "alignment": "left",
+          "wrap": false
+        },
+        {
+          "alignment": "left",
+          "wrap": false
+        },
+        {
+          "alignment": "left",
+          "wrap": false
+        }
+      ]
+    },
+    "note": {
+      "name": "Wildfire (Note)",
+      "template": [
+        "WILDFIRE",
+        "{{wildfire.fire_name}}",
+        "{{wildfire.containment}} CONT"
+      ],
+      "line_metadata": [
+        {
+          "alignment": "left",
+          "wrap": false
+        },
+        {
+          "alignment": "left",
+          "wrap": true
+        },
+        {
+          "alignment": "left",
+          "wrap": false
+        }
+      ]
+    }
+  }
 }
