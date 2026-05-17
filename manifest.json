@@ -1,7 +1,7 @@
 {
   "id": "wildfire",
   "name": "Wildfire Tracker",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Display active wildfire incidents from the National Interagency Fire Center (NIFC).",
   "author": "FiestaBoard Team",
   "icon": "flame",
