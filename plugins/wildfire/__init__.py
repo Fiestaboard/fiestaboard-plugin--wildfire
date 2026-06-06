@@ -60,8 +60,8 @@ class WildfirePlugin(PluginBase):
                 )
 
             top_attr = features[0].get("attributes", {})
-            fire_name = str(top_attr.get("IncidentName", "Unknown"))[:20]
-            state = str(top_attr.get("POOState", ""))[:3]
+            fire_name = str(top_attr.get("IncidentName", "Unknown"))
+            state = str(top_attr.get("POOState", ""))
             raw_acres = top_attr.get("GISAcres", 0) or 0
             acres = f"{int(raw_acres):,}"
             pct = top_attr.get("PercentContained", 0) or 0
