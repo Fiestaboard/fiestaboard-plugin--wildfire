@@ -88,6 +88,28 @@
       "primary": true
     }
   ],
+  "teaser": "CALDOR 42% CONT",
+  "previews": [
+    {
+      "device_type": "flagship",
+      "rows": [
+        "Wildfire Tracker",
+        "",
+        "Caldor Fire",
+        "CA  28,000 acres",
+        "Containment: 42%",
+        "15 active fires"
+      ]
+    },
+    {
+      "device_type": "note",
+      "rows": [
+        "{63}{64} WILDFIRE",
+        "CALDOR FIRE",
+        "42% CONTAINED"
+      ]
+    }
+  ],
   "api_docs": "https://www.nifc.gov/fire-information/nfn",
   "demo": {
     "flagship": {
